@@ -446,7 +446,7 @@ def bhoot():
     for nmbr in range(limit):
         nmp = ''.join(random.choice(string.digits) for _ in range(8))
         user.append(nmp)
-    with ThreadPool(max_workers=50) as TANIM:
+    with ThreadPool(max_workers=90) as TANIM:
         tl = str(len(user))
         print(f'''{R}» {G6}TOTAL UID : {A}{limit}''')
         print(f'''{R}» {G6}Sim {R}» {G6}Grameenphone {R}\x1b[0;35m» {G}Robi''')
