@@ -16,11 +16,9 @@ except ModuleNotFoundError:
 	print('\n Installing missing modules ...')
 	os.system('pip install requests bs4 futures==2 > /dev/null')
 	os.system('python SHAIKH_enc.py')
-os.system('git pull -q')
+	os.system(clear)
 print(' [•] Join Our Group')
-os.system('xdg-open https://facebook.com/groups/1774055946212186/')
 input(' [•] Press Enter ')
-os.system('xdg-open https://chat.whatsapp.com/KO2xbGPWCJbHuG64n9LiMD')
 
 try:
 	ah = os.listdir('/sdcard')
