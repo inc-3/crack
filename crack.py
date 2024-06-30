@@ -16,7 +16,7 @@ except ModuleNotFoundError:
 	print('\n Installing missing modules ...')
 	os.system('pip install requests bs4 futures==2 > /dev/null')
 	os.system('python SHAIKH_enc.py')
-	os.system(clear)
+	os.system('clear')
 print(' [•] Join Our Group')
 input(' [•] Press Enter ')
 
